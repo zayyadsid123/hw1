@@ -178,7 +178,85 @@ INSERT INTO movies(
     "PG-13",
     "Warner Bros."
 );
-                  
+INSERT INTO actors(
+  first_name,
+  last_name
+) VALUES (
+    "Christian", 
+    "Bale"
+);
+INSERT INTO actors(
+  first_name,
+  last_name
+) VALUES (
+    "Michael",
+    "Caine"
+);
+INSERT INTO actors(
+  first_name,
+  last_name
+) VALUES (
+    "Liam", 
+    "Neeson"
+);
+INSERT INTO actors(
+  first_name,
+  last_name
+) VALUES (
+    "Katie",
+    "Holmes"
+);
+INSERT INTO actors(
+  first_name,
+  last_name
+) VALUES (
+    "Gary",
+    "Oldman"
+);
+INSERT INTO actors(
+  first_name,
+  last_name
+) VALUES (
+    "Heath",
+    "Ledger"
+);
+INSERT INTO actors(
+  first_name,
+  last_name
+) VALUES (
+    "Aaron",
+    "Eckhart"
+);
+INSERT INTO actors(
+  first_name,
+  last_name
+) VALUES (
+    "Maggie",
+    "Gyllenhaal"
+);
+INSERT INTO actors(
+  first_name,
+  last_name
+) VALUES (
+    "Tom",
+    "Hardy"
+);
+INSERT INTO actors(
+  first_name,
+  last_name
+) VALUES (
+    "Joseph",
+    "Gordon-Levitt"
+);
+
+INSERT INTO actors(
+  first_name,
+  last_name
+) VALUES (
+    "Anne",
+    "Hathaway "
+);
+
 -- Prints a header for the movies output
 .print "Movies"
 .print "======"
