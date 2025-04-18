@@ -134,8 +134,7 @@ CREATE TABLE studios (
 
 CREATE TABLE actors (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  first_name TEXT,
-  last_name TEXT
+  full_name TEXT
 );
 
 CREATE TABLE roles (
@@ -197,82 +196,60 @@ INSERT INTO movies(
 
 -- Insert into actors
 INSERT INTO actors(
-  first_name,
-  last_name
+  full_name
 ) VALUES (
-    "Christian", 
-    "Bale"
+    "Christian Bale"
 );
 INSERT INTO actors(
-  first_name,
-  last_name
+  full_name
 ) VALUES (
-    "Michael",
-    "Caine"
+    "Michael Caine"
 );
 INSERT INTO actors(
-  first_name,
-  last_name
+  full_name
 ) VALUES (
-    "Liam", 
-    "Neeson"
+    "Liam Neeson"
 );
 INSERT INTO actors(
-  first_name,
-  last_name
+  full_name
 ) VALUES (
-    "Katie",
-    "Holmes"
+    "Katie Holmes"
 );
 INSERT INTO actors(
-  first_name,
-  last_name
+  full_name
 ) VALUES (
-    "Gary",
-    "Oldman"
+    "Gary Oldman"
 );
 INSERT INTO actors(
-  first_name,
-  last_name
+  full_name
 ) VALUES (
-    "Heath",
-    "Ledger"
+    "Heath Ledger"
 );
 INSERT INTO actors(
-  first_name,
-  last_name
+  full_name
 ) VALUES (
-    "Aaron",
-    "Eckhart"
+    "Aaron Eckhart"
 );
 INSERT INTO actors(
-  first_name,
-  last_name
+  full_name
 ) VALUES (
-    "Maggie",
-    "Gyllenhaal"
+    "Maggie Gyllenhaal"
 );
 INSERT INTO actors(
-  first_name,
-  last_name
+  full_name
 ) VALUES (
-    "Tom",
-    "Hardy"
+    "Tom Hardy"
 );
 INSERT INTO actors(
-  first_name,
-  last_name
+  full_name
 ) VALUES (
-    "Joseph",
-    "Gordon-Levitt"
+    "Joseph Gordon-Levitt"
 );
 
 INSERT INTO actors(
-  first_name,
-  last_name
+  full_name
 ) VALUES (
-    "Anne",
-    "Hathaway "
+    "Anne Hathaway "
 );
 -- Insert into roles
 INSERT INTO roles(
@@ -431,6 +408,6 @@ INNER JOIN studios ON movies.studio_id=studios.id;
 
 -- The SQL statement for the cast output
 -- TODO!
-select movies.title, actors.first_name, actors.last_name, roles.character_full_name from roles
+select movies.title, actors.full_name, roles.character_full_name from roles
 INNER JOIN movies ON movies.id=roles.movie_id
 INNER JOIN actors on actors.id=roles.actor_id;
