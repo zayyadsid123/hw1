@@ -193,7 +193,6 @@ INSERT INTO movies(
     "1"
 );
 
-
 -- Insert into actors
 INSERT INTO actors(
   full_name
@@ -245,12 +244,12 @@ INSERT INTO actors(
 ) VALUES (
     "Joseph Gordon-Levitt"
 );
-
 INSERT INTO actors(
   full_name
 ) VALUES (
     "Anne Hathaway "
 );
+
 -- Insert into roles
 INSERT INTO roles(
   movie_id,
