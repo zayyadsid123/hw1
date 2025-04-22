@@ -141,7 +141,7 @@ CREATE TABLE roles (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   movie_id INTEGER,
   actor_id INTEGER,
-  character_full_name TEXT
+  role_full_name TEXT
 );
 
 
@@ -166,9 +166,9 @@ INSERT INTO movies(
   studio_id
 ) VALUES (
     "Batman Begins",
-    "2005", 
+    2005, 
     "PG-13",
-    "1"
+    1
 );
 INSERT INTO movies(
   title,
@@ -177,9 +177,9 @@ INSERT INTO movies(
   studio_id
 ) VALUES (
     "The Dark Knight",
-    "2008",
+    2008,
     "PG-13",
-    "1"
+    1
 );
 INSERT INTO movies(
   title,
@@ -188,9 +188,9 @@ INSERT INTO movies(
   studio_id
 ) VALUES (
     "The Dark Knight Rises",
-    "2012",
+    2012,
     "PG-13",
-    "1"
+    1
 );
 
 -- Insert into actors
@@ -247,143 +247,143 @@ INSERT INTO actors(
 INSERT INTO actors(
   full_name
 ) VALUES (
-    "Anne Hathaway "
+    "Anne Hathaway"
 );
 
 -- Insert into roles
 INSERT INTO roles(
   movie_id,
   actor_id,
-  character_full_name
+  role_full_name
 ) VALUES (
-    "1", 
-    "1",
+    1, 
+    1,
     "Bruce Wayne"
 );
 INSERT INTO roles(
   movie_id,
   actor_id,
-  character_full_name
+  role_full_name
 ) VALUES (
-    "1", 
-    "2",
+    1, 
+    2,
     "Alfred"
 );
 INSERT INTO roles(
   movie_id,
   actor_id,
-  character_full_name
+  role_full_name
 ) VALUES (
-    "1", 
-    "3",
+    1, 
+    3,
     "Ra's Al Ghul"
 );
 INSERT INTO roles(
   movie_id,
   actor_id,
-  character_full_name
+  role_full_name
 ) VALUES (
-    "1", 
-    "4",
+    1, 
+    4,
     "Rachel Dawes"
 );
 INSERT INTO roles(
   movie_id,
   actor_id,
-  character_full_name
+  role_full_name
 ) VALUES (
-    "1", 
-    "5",
+    1, 
+    5,
     "Commissioner Gordon"
 );
 INSERT INTO roles(
   movie_id,
   actor_id,
-  character_full_name
+  role_full_name
 ) VALUES (
-    "2", 
-    "1",
+    2, 
+    1,
     "Bruce Wayne"
 );
 INSERT INTO roles(
   movie_id,
   actor_id,
-  character_full_name
+  role_full_name
 ) VALUES (
-    "2", 
-    "6",
+    2, 
+    6,
     "Joker"
 );
 INSERT INTO roles(
   movie_id,
   actor_id,
-  character_full_name
+  role_full_name
 ) VALUES (
-    "2", 
-    "7",
+    2, 
+    7,
     "Harvey Dent"
 );
 INSERT INTO roles(
   movie_id,
   actor_id,
-  character_full_name
+  role_full_name
 ) VALUES (
-    "2", 
-    "2",
+    2, 
+    2,
     "Alfred"
 );
 INSERT INTO roles(
   movie_id,
   actor_id,
-  character_full_name
+  role_full_name
 ) VALUES (
-    "2", 
-    "8",
+    2, 
+    8,
     "Rachel Dawes"
 );
 INSERT INTO roles(
   movie_id,
   actor_id,
-  character_full_name
+  role_full_name
 ) VALUES (
-    "3", 
-    "1",
+    3, 
+    1,
     "Bruce Wayne"
 );
 INSERT INTO roles(
   movie_id,
   actor_id,
-  character_full_name
+  role_full_name
 ) VALUES (
-    "3", 
-    "5",
+    3, 
+    5,
     "Commissioner Gordon"
 );
 INSERT INTO roles(
   movie_id,
   actor_id,
-  character_full_name
+  role_full_name
 ) VALUES (
-    "3", 
-    "9",
+    3, 
+    9,
     "Bane"
 );
 INSERT INTO roles(
   movie_id,
   actor_id,
-  character_full_name
+  role_full_name
 ) VALUES (
-    "3", 
-    "10",
+    3, 
+    10,
     "John Blake"
 );
 INSERT INTO roles(
   movie_id,
   actor_id,
-  character_full_name
+  role_full_name
 ) VALUES (
-    "3", 
-    "11",
+    3, 
+    11,
     "Selina Kyle"
 );
 
@@ -407,6 +407,6 @@ INNER JOIN studios ON movies.studio_id=studios.id;
 
 -- The SQL statement for the cast output
 -- TODO!
-select movies.title, actors.full_name, roles.character_full_name from roles
+select movies.title, actors.full_name, roles.role_full_name from roles
 INNER JOIN movies ON movies.id=roles.movie_id
 INNER JOIN actors on actors.id=roles.actor_id;
